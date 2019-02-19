@@ -2,7 +2,8 @@ string = input("Give me a string: ")
 print("The string you gave is \"", string, "\"")
 length = len(string)
 print("the string is ",length, " characters long")
-
+punctlist = [","," ",".","!","'",":"]
+print(punctlist)
 
 
 def removespaces(stringToBeCleaned):
@@ -10,7 +11,8 @@ def removespaces(stringToBeCleaned):
     clean = ""
     while position < length:
         cleanletter = stringToBeCleaned[position]
-        if cleanletter != " " and cleanletter != "." and cleanletter != ":" and cleanletter != "," and cleanletter != "'":
+        # if cleanletter != " " and cleanletter != "." and cleanletter != ":" and cleanletter != "," and cleanletter != "'":
+        if cleanletter not in punctlist:
             clean = clean + cleanletter
         position += 1
     return clean
