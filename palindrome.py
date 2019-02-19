@@ -10,7 +10,7 @@ def removespaces(stringToBeCleaned):
     clean = ""
     while position < length:
         cleanletter = stringToBeCleaned[position]
-        if cleanletter != " ":
+        if cleanletter != " " and cleanletter != "." and cleanletter != ":" and cleanletter != "," and cleanletter != "'":
             clean = clean + cleanletter
         position += 1
     return clean
